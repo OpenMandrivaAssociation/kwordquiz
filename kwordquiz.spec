@@ -1,11 +1,11 @@
 Name: kwordquiz
 Summary: A general purpose flash card program
-Version: 4.8.1
+Version: 4.8.2
 Release: 1
 Group: Graphical desktop/KDE
 License: GPLv2 LGPLv2 GFDL
 URL: http://edu.kde.org/kwordquiz
-Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/%name-%version.tar.bz2
+Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/%name-%version.tar.xz
 BuildRequires: kdelibs4-devel >= 2:%{version}
 BuildRequires: libkdeedu-devel >= %{version}
 Requires: libkdeedu = %{version}
