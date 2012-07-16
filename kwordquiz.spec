@@ -20,6 +20,7 @@ language learning features, please try KVocTrain.
 %_kde_appsdir/kwordquiz
 %_kde_bindir/kwordquiz
 %_kde_iconsdir/*/*/apps/kwordquiz.*
+%_kde_iconsdir/*/*/mimetypes/*kwordquiz*
 %_kde_datadir/applications/kde4/kwordquiz.desktop
 %_kde_datadir/config.kcfg/kwordquiz.kcfg
 %_kde_datadir/config/kwordquiz.knsrc
