@@ -1,6 +1,6 @@
 Name:		kwordquiz
 Summary:	A general purpose flash card program
-Version:	4.10.5
+Version:	4.11.0
 Release:	1
 Group:		Graphical desktop/KDE
 License:	GPLv2 LGPLv2 GFDL
@@ -39,6 +39,9 @@ language learning features, please try KVocTrain.
 %makeinstall_std -C build
 
 %changelog
+* Wed Aug 14 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.11.0-1
+- New version 4.11.0
+
 * Wed Jul 03 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.10.5-1
 - New version 4.10.5
 
