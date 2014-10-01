@@ -1,13 +1,13 @@
-Name:		kwordquiz
 Summary:	A general purpose flash card program
+Name:		kwordquiz
 Version:	4.14.1
 Release:	1
+License:	GPLv2+
 Group:		Graphical desktop/KDE
-License:	GPLv2 LGPLv2 GFDL
-URL:		http://edu.kde.org/kwordquiz
-Source:		ftp://ftp.kde.org/pub/kde/stable/%{version}/src/%{name}-%{version}.tar.xz
-BuildRequires:	kdelibs4-devel
+Url:		http://edu.kde.org/kwordquiz
+Source0:	ftp://ftp.kde.org/pub/kde/stable/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	libkdeedu-devel >= %{version}
+BuildRequires:	kdelibs4-devel
 Requires:	libkdeedu = %{version}
 
 %description
@@ -17,16 +17,17 @@ language learning features, please try KVocTrain.
 
 %files
 %doc AUTHORS COPYING COPYING.LIB COPYING.DOC
+%doc %{_kde_docdir}/*/*/kwordquiz
+%{_kde_applicationsdir}/kwordquiz.desktop
 %{_kde_appsdir}/kwordquiz
 %{_kde_bindir}/kwordquiz
+%{_kde_configdir}/kwordquiz.knsrc
+%{_kde_datadir}/appdata/kwordquiz.appdata.xml
+%{_kde_datadir}/config.kcfg/kwordquiz.kcfg
 %{_kde_iconsdir}/*/*/apps/kwordquiz.*
 %{_kde_iconsdir}/*/*/mimetypes/application-x-kwordquiz.*
-%{_kde_applicationsdir}/kwordquiz.desktop
-%{_kde_datadir}/config.kcfg/kwordquiz.kcfg
-%{_kde_configdir}/kwordquiz.knsrc
-%{_kde_docdir}/*/*/kwordquiz
 
-#----------------------------------------------------------------------
+#----------------------------------------------------------------------------
 
 %prep
 %setup -q
@@ -41,6 +42,7 @@ language learning features, please try KVocTrain.
 %changelog
 * Mon Sep 29 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.14.1-1
 - New version 4.14.1
+- Update files
 
 * Tue Jul 15 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.13.3-1
 - New version 4.13.3
