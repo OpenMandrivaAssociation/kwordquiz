@@ -8,6 +8,22 @@ Url:		http://edu.kde.org/kwordquiz
 Source0:	http://download.kde.org/stable/applications/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	libkdeedu-devel >= %{version}
 BuildRequires:	cmake(ECM)
+BuildRequires:	cmake(KF5I18n)
+BuildRequires:	cmake(KF5Crash)
+BuildRequires:	cmake(KF5Sonnet)
+BuildRequires:	cmake(KF5Config)
+BuildRequires:	cmake(KF5ConfigWidgets)
+BuildRequires:	cmake(KF5DocTools)
+BuildRequires:	cmake(KF5GuiAddons)
+BuildRequires:	cmake(KF5IconThemes)
+BuildRequires:	cmake(KF5ItemViews)
+BuildRequires:	cmake(KF5NotifyConfig)
+BuildRequires:	cmake(KF5KIO)
+BuildRequires:	cmake(KF5NewStuff)
+BuildRequires:	cmake(KF5Notifications)
+BuildRequires:	cmake(KF5XmlGui)
+BuildRequires:	cmake(KF5KDELibs4Support)
+BuildRequires:	cmake(KF5Declarative)
 
 %description
 KWordQuiz is a general purpose flash card program. It can be used for
