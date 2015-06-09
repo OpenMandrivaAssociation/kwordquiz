@@ -31,16 +31,11 @@ vocabulary learning and many other subjects. If you need more advanced
 language learning features, please try KVocTrain.
 
 %files
-%doc AUTHORS COPYING COPYING.LIB COPYING.DOC
-%doc %{_kde_docdir}/*/*/kwordquiz
-%{_kde_applicationsdir}/kwordquiz.desktop
-%{_kde_appsdir}/kwordquiz
-%{_kde_bindir}/kwordquiz
-%{_kde_configdir}/kwordquiz.knsrc
-%{_kde_datadir}/appdata/kwordquiz.appdata.xml
-%{_kde_datadir}/config.kcfg/kwordquiz.kcfg
-%{_kde_iconsdir}/*/*/apps/kwordquiz.*
-%{_kde_iconsdir}/*/*/mimetypes/application-x-kwordquiz.*
+%doc AUTHORS COPYING
+%{_datadir}/applications/org.kde.kwordquiz.desktop
+%{_datadir}/knotifications5/kwordquiz.knsrc
+%{_datadir}/kwordquiz
+%{_datadir}/kxmlgui5/kwordquiz
 
 #----------------------------------------------------------------------------
 
