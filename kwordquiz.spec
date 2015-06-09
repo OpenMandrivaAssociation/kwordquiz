@@ -32,10 +32,15 @@ language learning features, please try KVocTrain.
 
 %files
 %doc AUTHORS COPYING
+%doc %{_docdir}/HTML/*/kwordquiz
+%{_bindir}/kwordquiz
+%{_datadir}/appdata/kwordquiz.appdata.xml
+%{_datadir}/config.kcfg/kwordquiz.kcfg
 %{_datadir}/applications/org.kde.kwordquiz.desktop
 %{_datadir}/knotifications5/kwordquiz.knsrc
 %{_datadir}/kwordquiz
 %{_datadir}/kxmlgui5/kwordquiz
+%{_iconsdir}/hicolor/*/*/*kwordquiz.png
 
 #----------------------------------------------------------------------------
 
