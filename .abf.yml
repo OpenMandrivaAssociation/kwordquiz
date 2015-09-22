@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   kwordquiz-15.08.0.tar.xz: ea002f131f8aaa41ab5ad8c6b07fdb836d7ea0e2
+sources:
+  kwordquiz-15.08.1.tar.xz: 6e1872ea368d742e3658f22b9909f26851a2a03b
