@@ -1,11 +1,13 @@
+%define stable %([ "`echo %{version} |cut -d. -f3`" -ge 70 ] && echo -n un; echo -n stable)
+
 Summary:	A general purpose flash card program
 Name:		kwordquiz
-Version:	16.12.2
+Version:	17.04.0
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://edu.kde.org/kwordquiz
-Source0:	http://download.kde.org/stable/applications/%{version}/src/%{name}-%{version}.tar.xz
+Source0:	http://download.kde.org/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	cmake(LibKEduVocDocument)
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(KF5I18n)
@@ -30,12 +32,11 @@ KWordQuiz is a general purpose flash card program. It can be used for
 vocabulary learning and many other subjects. If you need more advanced
 language learning features, please try KVocTrain.
 
-%files
+%files -f %{name}.lang
 %doc AUTHORS COPYING
-%doc %{_docdir}/HTML/*/kwordquiz
 %{_sysconfdir}/xdg/kwordquiz.knsrc
 %{_bindir}/kwordquiz
-%{_datadir}/appdata/org.kde.kwordquiz.appdata.xml
+%{_datadir}/metainfo/org.kde.kwordquiz.appdata.xml
 %{_datadir}/config.kcfg/kwordquiz.kcfg
 %{_datadir}/applications/org.kde.kwordquiz.desktop
 %{_datadir}/knotifications5/kwordquiz.notifyrc
@@ -54,3 +55,4 @@ language learning features, please try KVocTrain.
 
 %install
 %ninja_install -C build
+%find_lang %{name} --with-html
