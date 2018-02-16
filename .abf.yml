@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   kwordquiz-17.12.1.tar.xz: 893be4c0ed20215120d4115cb19bb655c73bc361
+sources:
+  kwordquiz-17.12.2.tar.xz: 6ded19015d19540a4c5776e20b9c5a667fdfc66f
