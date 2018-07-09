@@ -2,7 +2,7 @@
 
 Summary:	A general purpose flash card program
 Name:		kwordquiz
-Version:	 18.04.2
+Version:	18.04.2
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -26,6 +26,10 @@ BuildRequires:	cmake(KF5Notifications)
 BuildRequires:	cmake(KF5XmlGui)
 BuildRequires:	cmake(KF5KDELibs4Support)
 BuildRequires:	cmake(KF5Declarative)
+BuildRequires:	cmake(Qt5Core)
+BuildRequires:	cmake(Qt5Widgets)
+BuildRequires:	cmake(Qt5PrintSupport)
+BuildRequires:	cmake(Phonon4Qt5)
 
 %description
 KWordQuiz is a general purpose flash card program. It can be used for
