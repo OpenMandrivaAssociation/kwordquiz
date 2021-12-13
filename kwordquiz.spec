@@ -2,7 +2,7 @@
 
 Summary:	A general purpose flash card program
 Name:		kwordquiz
-Version:	21.08.3
+Version:	21.12.0
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -37,7 +37,6 @@ vocabulary learning and many other subjects. If you need more advanced
 language learning features, please try KVocTrain.
 
 %files -f %{name}.lang
-%doc AUTHORS COPYING
 %{_datadir}/knsrcfiles/kwordquiz.knsrc
 %{_bindir}/kwordquiz
 %{_datadir}/metainfo/org.kde.kwordquiz.appdata.xml
