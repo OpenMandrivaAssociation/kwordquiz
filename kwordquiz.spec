@@ -2,7 +2,7 @@
 
 Summary:	A general purpose flash card program
 Name:		kwordquiz
-Version:	23.04.1
+Version:	23.04.2
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
