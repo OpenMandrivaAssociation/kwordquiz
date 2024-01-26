@@ -8,7 +8,9 @@ License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://edu.kde.org/kwordquiz
 Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/kwordquiz-%{version}.tar.xz
-BuildRequires:	cmake(LibKEduVocDocument)
+# Currently can't do this because Plasma 5 provides it too
+#BuildRequires:	cmake(LibKEduVocDocument)
+BuildRequires:	%mklibname -d KEduVocDocument6
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(KF6I18n)
 BuildRequires:	cmake(KF6Crash)
