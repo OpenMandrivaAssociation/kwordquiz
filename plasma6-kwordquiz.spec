@@ -2,8 +2,8 @@
 
 Summary:	A general purpose flash card program
 Name:		plasma6-kwordquiz
-Version:	24.01.90
-Release:	2
+Version:	24.01.95
+Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://edu.kde.org/kwordquiz
