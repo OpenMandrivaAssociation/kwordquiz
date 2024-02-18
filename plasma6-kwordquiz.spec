@@ -1,13 +1,20 @@
+%define git 20240218
+%define gitbranch release/24.02
+%define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 70 ] && echo -n un; echo -n stable)
 
 Summary:	A general purpose flash card program
 Name:		plasma6-kwordquiz
-Version:	24.01.95
-Release:	1
+Version:	24.01.96
+Release:	%{?git:0.%{git}.}1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://edu.kde.org/kwordquiz
+%if 0%{?git:1}
+Source0:	https://invent.kde.org/education/kwordquiz/-/archive/%{gitbranch}/kwordquiz-%{gitbranchd}.tar.bz2#/kwordquiz-%{git}.tar.bz2
+%else
 Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/kwordquiz-%{version}.tar.xz
+%endif
 # Currently can't do this because Plasma 5 provides it too
 #BuildRequires:	cmake(LibKEduVocDocument)
 BuildRequires:	%mklibname -d KEduVocDocument6
@@ -54,7 +61,7 @@ language learning features, please try KVocTrain.
 #----------------------------------------------------------------------------
 
 %prep
-%autosetup -p1 -n kwordquiz-%{?git:master}%{!?git:%{version}}
+%autosetup -p1 -n kwordquiz-%{?git:%{gitbranchd}}%{!?git:%{version}}
 %cmake \
 	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
 	-G Ninja
