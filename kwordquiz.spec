@@ -5,7 +5,7 @@
 
 Summary:	A general purpose flash card program
 Name:		kwordquiz
-Version:	25.04.0
+Version:	25.04.3
 Release:	%{?git:0.%{git}.}1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -44,12 +44,17 @@ BuildRequires:	cmake(Qt6Multimedia)
 BuildRequires:	cmake(Qt6QuickControls2)
 BuildRequires:	cmake(Phonon4Qt6)
 
+%rename plasma6-kwordquiz
+
+BuildSystem:	cmake
+BuildOption:	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
+
 %description
 KWordQuiz is a general purpose flash card program. It can be used for
 vocabulary learning and many other subjects. If you need more advanced
 language learning features, please try KVocTrain.
 
-%files -f kwordquiz.lang
+%files -f %{name}.lang
 %{_datadir}/knsrcfiles/kwordquiz.knsrc
 %{_bindir}/kwordquiz
 %{_datadir}/metainfo/org.kde.kwordquiz.appdata.xml
@@ -57,18 +62,3 @@ language learning features, please try KVocTrain.
 %{_datadir}/applications/org.kde.kwordquiz.desktop
 %{_datadir}/kwordquiz
 %{_iconsdir}/hicolor/*/*/*kwordquiz.*
-
-#----------------------------------------------------------------------------
-
-%prep
-%autosetup -p1 -n kwordquiz-%{?git:%{gitbranchd}}%{!?git:%{version}}
-%cmake \
-	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
-	-G Ninja
-
-%build
-%ninja -C build
-
-%install
-%ninja_install -C build
-%find_lang kwordquiz --with-html
